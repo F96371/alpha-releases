@@ -1,16 +1,21 @@
 {
   "schemaVersion": 1,
-  "sequence": 2,
+  "sequence": 3,
   "product": "alpha",
   "channel": "stable",
   "latestVersion": "0.1.0",
   "minimumSupportedVersion": null,
   "blockedVersions": [],
-  "issuedAt": "2026-10-13T02:52:03Z",
-  "expiresAt": "2027-04-11T02:52:03Z",
+  "issuedAt": "2026-10-13T03:12:03Z",
+  "expiresAt": "2027-04-11T03:12:03Z",
   "title": "Alpha 0.1.0",
   "message": "Alpha 0.1.0 已发布。",
   "artifacts": {
+    "linux-x64": {
+      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.1.0/Alpha-0.1.0-x64.deb",
+      "sha512": "g_ZEdA7feG23LNIWp8BpIth5uPZ7iKIwOSQBux77bFvqunY08eBzrmv_XsIiayymArzv0EPOCYNuywqQvjNH6Q",
+      "size": 137952668
+    },
     "windows-x64": {
       "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.1.0/Alpha-0.1.0-x64-Setup.exe",
       "sha512": "qkarZaBnuEOU4KASX01K6MwBFSCdOzP8wCRYvxOZwQHVOBWtmd1018_zs1jUt1P92-8l50TH6uA8TXYEZR70eA",
@@ -20,6 +25,6 @@
   "signature": {
     "alg": "Ed25519",
     "kid": "release-1",
-    "value": "_8HoxhU0SVgUrMHIjlYHSkOMv60LM28AGfbWjl_KUa3GEEd1PzgQY-XYoWPmJCw0F072EdFT55tQv5mKzGKUDw"
+    "value": "V8QbgAzdAEsEYXWguw0_kOfxab8NldgHaMfUrmz_kJw0qGsnbvna4v9lmck7oMzDJojysDKA6uDu31idKiZdBQ"
   }
 }
