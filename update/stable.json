@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "sequence": 5,
+  "sequence": 6,
   "product": "alpha",
   "channel": "stable",
   "latestVersion": "0.2.0",
   "minimumSupportedVersion": null,
   "blockedVersions": [],
-  "issuedAt": "2026-10-16T08:51:45Z",
-  "expiresAt": "2027-04-14T08:51:45Z",
+  "issuedAt": "2026-10-16T11:56:02Z",
+  "expiresAt": "2027-04-14T11:56:02Z",
   "title": "Alpha 0.2.0",
   "message": "Alpha 0.2.0 已发布。",
   "artifacts": {
@@ -15,6 +15,11 @@
       "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-x64.deb",
       "sha512": "KscD5Neu-KBwEPsGcE2K70m15AYe60cLJwiECmef5iO1f3UcyOuo11slDrAqcxv4QH5rRIvqCpsH3gQ3TJLA_g",
       "size": 139346684
+    },
+    "macos-arm64": {
+      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-arm64.dmg",
+      "sha512": "bMhiie8GxBMCWBDyDdE3f2dcLNMqKAQoxlfijXW5tAP05-z1A-_vK2F81-ZXZQxZiWzvrYu7EHczWAIf8UNEfw",
+      "size": 182723934
     },
     "windows-x64": {
       "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-x64-Setup.exe",
@@ -25,6 +30,6 @@
   "signature": {
     "alg": "Ed25519",
     "kid": "release-1",
-    "value": "TqFxpObJhjusWKQ5yMiY5N2gMkc-fRklpRKjYHc90YnxKbucfC4jQB7B_F33NiZp1SjZS-Idjq26mH2LRb9wCw"
+    "value": "EyPBOPIG3hekgrgfzrJiE0wgd8kuIlGxsionqJBCtuRN_5Vbb7lzCLN6jP-Q63m6_XVJ7LmBFYtaPxJTAjtOAw"
   }
 }
