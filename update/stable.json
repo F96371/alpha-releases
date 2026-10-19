@@ -1,35 +1,30 @@
 {
   "schemaVersion": 1,
-  "sequence": 6,
+  "sequence": 7,
   "product": "alpha",
   "channel": "stable",
-  "latestVersion": "0.2.0",
+  "latestVersion": "0.3.0",
   "minimumSupportedVersion": null,
   "blockedVersions": [],
-  "issuedAt": "2026-10-16T11:56:02Z",
-  "expiresAt": "2027-04-14T11:56:02Z",
-  "title": "Alpha 0.2.0",
-  "message": "Alpha 0.2.0 已发布。",
+  "issuedAt": "2026-10-19T09:41:48Z",
+  "expiresAt": "2027-04-17T09:41:48Z",
+  "title": "Alpha 0.3.0",
+  "message": "Alpha 0.3.0 已发布。",
   "artifacts": {
     "linux-x64": {
-      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-x64.deb",
-      "sha512": "KscD5Neu-KBwEPsGcE2K70m15AYe60cLJwiECmef5iO1f3UcyOuo11slDrAqcxv4QH5rRIvqCpsH3gQ3TJLA_g",
-      "size": 139346684
-    },
-    "macos-arm64": {
-      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-arm64.dmg",
-      "sha512": "bMhiie8GxBMCWBDyDdE3f2dcLNMqKAQoxlfijXW5tAP05-z1A-_vK2F81-ZXZQxZiWzvrYu7EHczWAIf8UNEfw",
-      "size": 182723934
+      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-x64.deb",
+      "sha512": "FncQYyR1y_C1tDS7IKfrbrHUxucJlJr1cgg0o9cMLe8FAPZR3l68UE7bHHfzKcm7WcVJonly9sgwhjeboernJw",
+      "size": 140092396
     },
     "windows-x64": {
-      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-x64-Setup.exe",
-      "sha512": "iOHXrUPGkBfUs2LhXnoydJpdli3qbksrY28GcZ3fyL9YkeFBo-m7MWZvCr-FSiJ6dWL73fzPLnL_ewiH-gqHsg",
-      "size": 137881716
+      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-x64-Setup.exe",
+      "sha512": "c_oiCfN67ZrEgD_FTDHk_cnNHjx5gY4QT8gQfKxRa6pzYrDOVAOCGmXeqRHxleCuMfr1X7PS7NkvtgWFzP_r7g",
+      "size": 138408770
     }
   },
   "signature": {
     "alg": "Ed25519",
     "kid": "release-1",
-    "value": "EyPBOPIG3hekgrgfzrJiE0wgd8kuIlGxsionqJBCtuRN_5Vbb7lzCLN6jP-Q63m6_XVJ7LmBFYtaPxJTAjtOAw"
+    "value": "9q3de_HRYAZYDAIrT_VRRnC1sbsQJ14Qlq5TIGC0v4euu4IcFPEpfKpRW4SzQJ0tkW_6REjPtti9WdM4nWOwBw"
   }
 }
