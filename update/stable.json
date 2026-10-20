@@ -1,35 +1,30 @@
 {
   "schemaVersion": 1,
-  "sequence": 8,
+  "sequence": 9,
   "product": "alpha",
   "channel": "stable",
-  "latestVersion": "0.3.0",
+  "latestVersion": "0.3.5",
   "minimumSupportedVersion": null,
   "blockedVersions": [],
-  "issuedAt": "2026-10-19T10:38:57Z",
-  "expiresAt": "2027-04-17T10:38:57Z",
-  "title": "Alpha 0.3.0",
-  "message": "Alpha 0.3.0 已发布。",
+  "issuedAt": "2026-10-20T03:44:27Z",
+  "expiresAt": "2027-04-18T03:44:27Z",
+  "title": "Alpha 0.3.5",
+  "message": "Alpha 0.3.5 已发布。",
   "artifacts": {
     "linux-x64": {
-      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-x64.deb",
-      "sha512": "FncQYyR1y_C1tDS7IKfrbrHUxucJlJr1cgg0o9cMLe8FAPZR3l68UE7bHHfzKcm7WcVJonly9sgwhjeboernJw",
-      "size": 140092396
-    },
-    "macos-arm64": {
-      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-arm64.dmg",
-      "sha512": "LUJ8CyAq2olunjBEaB8V1uxh2aISfM61sF4xy7m6LrPonbIwqzRy_0TkaPCKdxas0o7aqTyl-suX3HOaXoEGiA",
-      "size": 183393927
+      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-x64.deb",
+      "sha512": "53NIQWAYOVn2kUtGlBtDt-yq0vTXBpI6MwkJgyWOOyxQIIAmIB5k7VBOnugSdrJEya-TDaIGVmjeJsnUOpdkoA",
+      "size": 140303892
     },
     "windows-x64": {
-      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-x64-Setup.exe",
-      "sha512": "c_oiCfN67ZrEgD_FTDHk_cnNHjx5gY4QT8gQfKxRa6pzYrDOVAOCGmXeqRHxleCuMfr1X7PS7NkvtgWFzP_r7g",
-      "size": 138408770
+      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-x64-Setup.exe",
+      "sha512": "m5lgTHsZAL-tukmKrteFMGlHWkIJcdz8ZSxuhLHVIXJd7EzXrVrdyLWk2qQMFXKW6KDojNzWFSiPbOpsLJkpiQ",
+      "size": 138276689
     }
   },
   "signature": {
     "alg": "Ed25519",
     "kid": "release-1",
-    "value": "8Aga5hpKc_Nsv-tGYxLujGhQEVs9rr9xbXCEhV0PvYLHm3HRPtBDgRYc5hCh_-ASu7C6NiXeJn8mJWBe5a1oDg"
+    "value": "gh6u09XDkYqOFEwfCDaRBAUfDEMSbpNIV65lblRppCHOvQHCakqaisS8ZgogYsILUZ2yDOxakRe11g8s7gumBA"
   }
 }
