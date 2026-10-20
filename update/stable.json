@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "sequence": 9,
+  "sequence": 10,
   "product": "alpha",
   "channel": "stable",
   "latestVersion": "0.3.5",
   "minimumSupportedVersion": null,
   "blockedVersions": [],
-  "issuedAt": "2026-10-20T03:44:27Z",
-  "expiresAt": "2027-04-18T03:44:27Z",
+  "issuedAt": "2026-10-20T06:08:29Z",
+  "expiresAt": "2027-04-18T06:08:29Z",
   "title": "Alpha 0.3.5",
   "message": "Alpha 0.3.5 已发布。",
   "artifacts": {
@@ -15,6 +15,11 @@
       "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-x64.deb",
       "sha512": "53NIQWAYOVn2kUtGlBtDt-yq0vTXBpI6MwkJgyWOOyxQIIAmIB5k7VBOnugSdrJEya-TDaIGVmjeJsnUOpdkoA",
       "size": 140303892
+    },
+    "macos-arm64": {
+      "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-arm64.dmg",
+      "sha512": "EKLovrhCWlKsd0P576KSMP3mnvGF0IIRf6b8lRHLR2DDB7pOzQph5bWi_uT51dw3hFsSGwjZ4KRRWTHayODOXg",
+      "size": 183712520
     },
     "windows-x64": {
       "url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-x64-Setup.exe",
@@ -25,6 +30,6 @@
   "signature": {
     "alg": "Ed25519",
     "kid": "release-1",
-    "value": "gh6u09XDkYqOFEwfCDaRBAUfDEMSbpNIV65lblRppCHOvQHCakqaisS8ZgogYsILUZ2yDOxakRe11g8s7gumBA"
+    "value": "rrODPYNu-iUiPxC0FzIUX-wkeNxSuYTcvU9xQpeMUovbeQD3GtUsnn623tY7kbnYnUrlIg0uz6-3s992pl0CDQ"
   }
 }
