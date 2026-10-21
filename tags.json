@@ -1,0 +1,122 @@
+[
+  {
+    "name": "v0.3.5",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/v0.3.5",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/v0.3.5",
+    "commit": {
+      "sha": "f4294fe7ba95aab5796c7ed32398c2879add5ca4",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/f4294fe7ba95aab5796c7ed32398c2879add5ca4"
+    },
+    "node_id": "REF_kwDOU_ZGUrByZWZzL3RhZ3MvdjAuMy41"
+  },
+  {
+    "name": "v0.3.0",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/v0.3.0",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/v0.3.0",
+    "commit": {
+      "sha": "2efebd098f8c528eac483631111cf98a0940ad6a",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/2efebd098f8c528eac483631111cf98a0940ad6a"
+    },
+    "node_id": "REF_kwDOU_ZGUrByZWZzL3RhZ3MvdjAuMy4w"
+  },
+  {
+    "name": "v0.2.0",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/v0.2.0",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/v0.2.0",
+    "commit": {
+      "sha": "9f0a82b87d912ee514571310ec8ddfad940db2b5",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/9f0a82b87d912ee514571310ec8ddfad940db2b5"
+    },
+    "node_id": "REF_kwDOU_ZGUrByZWZzL3RhZ3MvdjAuMi4w"
+  },
+  {
+    "name": "v0.1.1",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/v0.1.1",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/v0.1.1",
+    "commit": {
+      "sha": "f0aabf962992faf240bae1efe15c4a40f07bda20",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/f0aabf962992faf240bae1efe15c4a40f07bda20"
+    },
+    "node_id": "REF_kwDOU_ZGUrByZWZzL3RhZ3MvdjAuMS4x"
+  },
+  {
+    "name": "v0.1.0",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/v0.1.0",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/v0.1.0",
+    "commit": {
+      "sha": "4607a0cdcf3e08f5ae7b45ab452c2ac079195c16",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/4607a0cdcf3e08f5ae7b45ab452c2ac079195c16"
+    },
+    "node_id": "REF_kwDOU_ZGUrByZWZzL3RhZ3MvdjAuMS4w"
+  },
+  {
+    "name": "transcription-runtime-wxproto-0903cb4",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/transcription-runtime-wxproto-0903cb4",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/transcription-runtime-wxproto-0903cb4",
+    "commit": {
+      "sha": "9f0a82b87d912ee514571310ec8ddfad940db2b5",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/9f0a82b87d912ee514571310ec8ddfad940db2b5"
+    },
+    "node_id": "REF_kwDOU_ZGUtoAL3JlZnMvdGFncy90cmFuc2NyaXB0aW9uLXJ1bnRpbWUtd3hwcm90by0wOTAzY2I0"
+  },
+  {
+    "name": "transcription-runtime-wxproto-80ed82e",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/transcription-runtime-wxproto-80ed82e",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/transcription-runtime-wxproto-80ed82e",
+    "commit": {
+      "sha": "2efebd098f8c528eac483631111cf98a0940ad6a",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/2efebd098f8c528eac483631111cf98a0940ad6a"
+    },
+    "node_id": "REF_kwDOU_ZGUtoAL3JlZnMvdGFncy90cmFuc2NyaXB0aW9uLXJ1bnRpbWUtd3hwcm90by04MGVkODJl"
+  },
+  {
+    "name": "transcription-runtime-wxproto-37a1e37",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/transcription-runtime-wxproto-37a1e37",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/transcription-runtime-wxproto-37a1e37",
+    "commit": {
+      "sha": "f0aabf962992faf240bae1efe15c4a40f07bda20",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/f0aabf962992faf240bae1efe15c4a40f07bda20"
+    },
+    "node_id": "REF_kwDOU_ZGUtoAL3JlZnMvdGFncy90cmFuc2NyaXB0aW9uLXJ1bnRpbWUtd3hwcm90by0zN2ExZTM3"
+  },
+  {
+    "name": "transcription-runtime-wxproto-29aadff",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/transcription-runtime-wxproto-29aadff",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/transcription-runtime-wxproto-29aadff",
+    "commit": {
+      "sha": "4607a0cdcf3e08f5ae7b45ab452c2ac079195c16",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/4607a0cdcf3e08f5ae7b45ab452c2ac079195c16"
+    },
+    "node_id": "REF_kwDOU_ZGUtoAL3JlZnMvdGFncy90cmFuc2NyaXB0aW9uLXJ1bnRpbWUtd3hwcm90by0yOWFhZGZm"
+  },
+  {
+    "name": "transcription-runtime-wxproto-6ddbfe7",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/transcription-runtime-wxproto-6ddbfe7",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/transcription-runtime-wxproto-6ddbfe7",
+    "commit": {
+      "sha": "4607a0cdcf3e08f5ae7b45ab452c2ac079195c16",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/4607a0cdcf3e08f5ae7b45ab452c2ac079195c16"
+    },
+    "node_id": "REF_kwDOU_ZGUtoAL3JlZnMvdGFncy90cmFuc2NyaXB0aW9uLXJ1bnRpbWUtd3hwcm90by02ZGRiZmU3"
+  },
+  {
+    "name": "ffmpeg-minimal-8.1.3",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/ffmpeg-minimal-8.1.3",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/ffmpeg-minimal-8.1.3",
+    "commit": {
+      "sha": "4607a0cdcf3e08f5ae7b45ab452c2ac079195c16",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/4607a0cdcf3e08f5ae7b45ab452c2ac079195c16"
+    },
+    "node_id": "REF_kwDOU_ZGUr5yZWZzL3RhZ3MvZmZtcGVnLW1pbmltYWwtOC4xLjM"
+  },
+  {
+    "name": "ffmpeg-minimal-8.1.3-r2",
+    "zipball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/zipball/refs/tags/ffmpeg-minimal-8.1.3-r2",
+    "tarball_url": "https://api.github.com/repos/xunchahaha/alpha-releases/tarball/refs/tags/ffmpeg-minimal-8.1.3-r2",
+    "commit": {
+      "sha": "2efebd098f8c528eac483631111cf98a0940ad6a",
+      "url": "https://api.github.com/repos/xunchahaha/alpha-releases/commits/2efebd098f8c528eac483631111cf98a0940ad6a"
+    },
+    "node_id": "REF_kwDOU_ZGUtoAIXJlZnMvdGFncy9mZm1wZWctbWluaW1hbC04LjEuMy1yMg"
+  }
+]

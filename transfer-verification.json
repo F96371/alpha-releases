@@ -1,0 +1,320 @@
+{
+  "source": "xunchahaha/alpha-releases",
+  "destination": "F96371/alpha-releases",
+  "checked_at_utc": "2026-10-21T03:10:28.995334+00:00",
+  "source_head": "09232cbca892241fd3d2046957832a6b4d764ddc",
+  "all_source_git_refs_identical": true,
+  "release_count": 12,
+  "asset_count": 30,
+  "asset_bytes": 3336589348,
+  "all_asset_sha256_verified": true,
+  "latest_tag": "v0.3.5",
+  "issues_archived_count": 29,
+  "limitations": [
+    "GitHub-generated release/asset IDs, original author identity, original creation/publication times and download counts cannot be assigned to the new copies.",
+    "Issue content and original metadata are archived as JSON; original issue identities are not recreated.",
+    "Source discussion/reaction participants, stars/watchers/forks and unavailable private projects are not cloned."
+  ],
+  "assets": [
+    {
+      "tag": "ffmpeg-minimal-8.1.3",
+      "name": "ffmpeg-8.1.3-minimal-linux-x64",
+      "size": 4774216,
+      "sha256": "ca52325aec690a061086ab9649f700e80b405b0d19a18822662679b1caf49d84",
+      "source_declared_sha256": "ca52325aec690a061086ab9649f700e80b405b0d19a18822662679b1caf49d84",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/ffmpeg-minimal-8.1.3/ffmpeg-8.1.3-minimal-linux-x64",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-9d075d829f6592a6bd4e/ffmpeg-8.1.3-minimal-linux-x64",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "ffmpeg-minimal-8.1.3",
+      "name": "ffmpeg-8.1.3-minimal-windows-x64.exe",
+      "size": 3617280,
+      "sha256": "330a009e22a506f6620684f4fa16cddb03f50515f19477ed90bec98e430d5f84",
+      "source_declared_sha256": "330a009e22a506f6620684f4fa16cddb03f50515f19477ed90bec98e430d5f84",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/ffmpeg-minimal-8.1.3/ffmpeg-8.1.3-minimal-windows-x64.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-9d075d829f6592a6bd4e/ffmpeg-8.1.3-minimal-windows-x64.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "ffmpeg-minimal-8.1.3-r2",
+      "name": "ffmpeg-8.1.3-r2-minimal-linux-x64",
+      "size": 5138760,
+      "sha256": "97eaa4f556379b83264cdd890c4f23a75bcb34b20d2447bad5ac916d07fa08d2",
+      "source_declared_sha256": "97eaa4f556379b83264cdd890c4f23a75bcb34b20d2447bad5ac916d07fa08d2",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/ffmpeg-minimal-8.1.3-r2/ffmpeg-8.1.3-r2-minimal-linux-x64",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-ce181ed03fc6260ab875/ffmpeg-8.1.3-r2-minimal-linux-x64",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "ffmpeg-minimal-8.1.3-r2",
+      "name": "ffmpeg-8.1.3-r2-minimal-windows-x64.exe",
+      "size": 3993088,
+      "sha256": "e7342a743e75521881d70f5e54069a0b70bf26dc33dde375c4fbd9aa7d1092a8",
+      "source_declared_sha256": "e7342a743e75521881d70f5e54069a0b70bf26dc33dde375c4fbd9aa7d1092a8",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/ffmpeg-minimal-8.1.3-r2/ffmpeg-8.1.3-r2-minimal-windows-x64.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-ce181ed03fc6260ab875/ffmpeg-8.1.3-r2-minimal-windows-x64.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "transcription-runtime-wxproto-0903cb4",
+      "name": "alpha-transcription-runtime-windows-x64.json",
+      "size": 590,
+      "sha256": "6194c4bb6fefe0f63e41b57f08164985edccf48364861a8f55679ab8efe28913",
+      "source_declared_sha256": "6194c4bb6fefe0f63e41b57f08164985edccf48364861a8f55679ab8efe28913",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/transcription-runtime-wxproto-0903cb4/alpha-transcription-runtime-windows-x64.json",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-c19168d39f2c206790dd/alpha-transcription-runtime-windows-x64.json",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "transcription-runtime-wxproto-0903cb4",
+      "name": "alpha-transcription-worker-windows-x64-60966d1c78d06d3e.exe",
+      "size": 101403830,
+      "sha256": "60966d1c78d06d3e268a643d6372f7a703c9bf5f1ac091f7e307079fec214508",
+      "source_declared_sha256": "60966d1c78d06d3e268a643d6372f7a703c9bf5f1ac091f7e307079fec214508",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/transcription-runtime-wxproto-0903cb4/alpha-transcription-worker-windows-x64-60966d1c78d06d3e.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-c19168d39f2c206790dd/alpha-transcription-worker-windows-x64-60966d1c78d06d3e.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "transcription-runtime-wxproto-29aadff",
+      "name": "alpha-transcription-worker-windows-x64-3a476e3ddd704cec.exe",
+      "size": 100143707,
+      "sha256": "3a476e3ddd704cec74054b94f4c98634c780af50ee56a82ee6b2bcf0132a2811",
+      "source_declared_sha256": "3a476e3ddd704cec74054b94f4c98634c780af50ee56a82ee6b2bcf0132a2811",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/transcription-runtime-wxproto-29aadff/alpha-transcription-worker-windows-x64-3a476e3ddd704cec.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-fbbca9c2fad2908ff762/alpha-transcription-worker-windows-x64-3a476e3ddd704cec.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "transcription-runtime-wxproto-37a1e37",
+      "name": "alpha-transcription-runtime-windows-x64.json",
+      "size": 590,
+      "sha256": "73259c969580443e372764aa4b3efe1808a1c0e5f3cb190db519a709c19e8e7b",
+      "source_declared_sha256": "73259c969580443e372764aa4b3efe1808a1c0e5f3cb190db519a709c19e8e7b",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/transcription-runtime-wxproto-37a1e37/alpha-transcription-runtime-windows-x64.json",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-6cc27e8ed6eee8586608/alpha-transcription-runtime-windows-x64.json",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "transcription-runtime-wxproto-37a1e37",
+      "name": "alpha-transcription-worker-windows-x64-bd18deb120db0ce9.exe",
+      "size": 101403261,
+      "sha256": "bd18deb120db0ce907ebc8d3364e8b22a122a3cfd7ad82577f62601106cda622",
+      "source_declared_sha256": "bd18deb120db0ce907ebc8d3364e8b22a122a3cfd7ad82577f62601106cda622",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/transcription-runtime-wxproto-37a1e37/alpha-transcription-worker-windows-x64-bd18deb120db0ce9.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-6cc27e8ed6eee8586608/alpha-transcription-worker-windows-x64-bd18deb120db0ce9.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "transcription-runtime-wxproto-6ddbfe7",
+      "name": "alpha-transcription-runtime-windows-x64.json",
+      "size": 589,
+      "sha256": "2bb9cd5ed42c27228e5362a36a6ac35f248a7f752c33ef790ddddc648727e3e7",
+      "source_declared_sha256": "2bb9cd5ed42c27228e5362a36a6ac35f248a7f752c33ef790ddddc648727e3e7",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/transcription-runtime-wxproto-6ddbfe7/alpha-transcription-runtime-windows-x64.json",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-99a8008bbb3d54b36a69/alpha-transcription-runtime-windows-x64.json",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "transcription-runtime-wxproto-6ddbfe7",
+      "name": "alpha-transcription-worker-windows-x64-516a91c9cd9372fd.exe",
+      "size": 99993127,
+      "sha256": "516a91c9cd9372fd6c9ebcaaa2998b9039ef3400d88229024a5bd6259892b09a",
+      "source_declared_sha256": "516a91c9cd9372fd6c9ebcaaa2998b9039ef3400d88229024a5bd6259892b09a",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/transcription-runtime-wxproto-6ddbfe7/alpha-transcription-worker-windows-x64-516a91c9cd9372fd.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-99a8008bbb3d54b36a69/alpha-transcription-worker-windows-x64-516a91c9cd9372fd.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "transcription-runtime-wxproto-80ed82e",
+      "name": "alpha-transcription-worker-windows-x64-810e6f299bc42b53.exe",
+      "size": 101403078,
+      "sha256": "810e6f299bc42b53b94e741a927a3dc3b22b83e6a9d38ef1143dde975484d345",
+      "source_declared_sha256": "810e6f299bc42b53b94e741a927a3dc3b22b83e6a9d38ef1143dde975484d345",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/transcription-runtime-wxproto-80ed82e/alpha-transcription-worker-windows-x64-810e6f299bc42b53.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-299a09dacb60ea03fd1f/alpha-transcription-worker-windows-x64-810e6f299bc42b53.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.1.0",
+      "name": "Alpha-0.1.0-x64-Setup.exe",
+      "size": 136134600,
+      "sha256": "c322f603ba3942974a014f9208419d2375468b399c042dc08adb1d6310d0d9e6",
+      "source_declared_sha256": "c322f603ba3942974a014f9208419d2375468b399c042dc08adb1d6310d0d9e6",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.1.0/Alpha-0.1.0-x64-Setup.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-a04aa03ce62c61ab9ada/Alpha-0.1.0-x64-Setup.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.1.0",
+      "name": "Alpha-0.1.0-x64.AppImage",
+      "size": 175069432,
+      "sha256": "b6717ad3450a890739851e59a15e4616f5fd62281743e97989c982fb44524709",
+      "source_declared_sha256": "b6717ad3450a890739851e59a15e4616f5fd62281743e97989c982fb44524709",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.1.0/Alpha-0.1.0-x64.AppImage",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-a04aa03ce62c61ab9ada/Alpha-0.1.0-x64.AppImage",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.1.0",
+      "name": "Alpha-0.1.0-x64.deb",
+      "size": 137952668,
+      "sha256": "0f1d9428374239445910c07a780849f6dd7ab85acebc3c71370eccebb1176566",
+      "source_declared_sha256": "0f1d9428374239445910c07a780849f6dd7ab85acebc3c71370eccebb1176566",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.1.0/Alpha-0.1.0-x64.deb",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-a04aa03ce62c61ab9ada/Alpha-0.1.0-x64.deb",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.1.1",
+      "name": "Alpha-0.1.1-x64-Setup.exe",
+      "size": 136146047,
+      "sha256": "b01109e4b442fd450a56229a400154f7bf422e9ffa09d7a1a658d6b1daf82e88",
+      "source_declared_sha256": "b01109e4b442fd450a56229a400154f7bf422e9ffa09d7a1a658d6b1daf82e88",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.1.1/Alpha-0.1.1-x64-Setup.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-06b8484558cb8d1109eb/Alpha-0.1.1-x64-Setup.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.1.1",
+      "name": "Alpha-0.1.1-x64.AppImage",
+      "size": 175098131,
+      "sha256": "a595f78ab667117b38a0e6e3739f76b14a0d3891a33b3ea2f32b4cffd1f5b658",
+      "source_declared_sha256": "a595f78ab667117b38a0e6e3739f76b14a0d3891a33b3ea2f32b4cffd1f5b658",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.1.1/Alpha-0.1.1-x64.AppImage",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-06b8484558cb8d1109eb/Alpha-0.1.1-x64.AppImage",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.1.1",
+      "name": "Alpha-0.1.1-x64.deb",
+      "size": 137971800,
+      "sha256": "ca670db9061ac2cef34faefcda02595bbc308247e7efd9d00d85141841c0a4a9",
+      "source_declared_sha256": "ca670db9061ac2cef34faefcda02595bbc308247e7efd9d00d85141841c0a4a9",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.1.1/Alpha-0.1.1-x64.deb",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-06b8484558cb8d1109eb/Alpha-0.1.1-x64.deb",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.2.0",
+      "name": "Alpha-0.2.0-arm64.dmg",
+      "size": 182723934,
+      "sha256": "cdfb50640f1c6cb33fedfacff1a21c4c2a6f8d3f197000170b9f3c826c74224f",
+      "source_declared_sha256": "cdfb50640f1c6cb33fedfacff1a21c4c2a6f8d3f197000170b9f3c826c74224f",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-arm64.dmg",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-68a45bfc4533bb0bdc4d/Alpha-0.2.0-arm64.dmg",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.2.0",
+      "name": "Alpha-0.2.0-x64-Setup.exe",
+      "size": 137881716,
+      "sha256": "d89dbab2204cac21ca2d726893b4c3fa79ab16456dd5c9c74b0af515e4723529",
+      "source_declared_sha256": "d89dbab2204cac21ca2d726893b4c3fa79ab16456dd5c9c74b0af515e4723529",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-x64-Setup.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-68a45bfc4533bb0bdc4d/Alpha-0.2.0-x64-Setup.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.2.0",
+      "name": "Alpha-0.2.0-x64.AppImage",
+      "size": 176693363,
+      "sha256": "d8da1c0a798fef443fb0d7ea5ca2f4287910656230a0818ad7941f0ade732107",
+      "source_declared_sha256": "d8da1c0a798fef443fb0d7ea5ca2f4287910656230a0818ad7941f0ade732107",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-x64.AppImage",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-68a45bfc4533bb0bdc4d/Alpha-0.2.0-x64.AppImage",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.2.0",
+      "name": "Alpha-0.2.0-x64.deb",
+      "size": 139346684,
+      "sha256": "9d79a56b88981c496818d93600698d11f8e21d759381c66c3fec3a10b38980d6",
+      "source_declared_sha256": "9d79a56b88981c496818d93600698d11f8e21d759381c66c3fec3a10b38980d6",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.2.0/Alpha-0.2.0-x64.deb",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-68a45bfc4533bb0bdc4d/Alpha-0.2.0-x64.deb",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.3.0",
+      "name": "Alpha-0.3.0-arm64.dmg",
+      "size": 183393927,
+      "sha256": "74f2af83aef129557dc43425c84163266ea1b4309a5a8d9773d2800dc4ecc73c",
+      "source_declared_sha256": "74f2af83aef129557dc43425c84163266ea1b4309a5a8d9773d2800dc4ecc73c",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-arm64.dmg",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-b10964cfb3dfc64b597d/Alpha-0.3.0-arm64.dmg",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.3.0",
+      "name": "Alpha-0.3.0-x64-Setup.exe",
+      "size": 138408770,
+      "sha256": "fe499b0517d6c4919f5317f3c18b512e43d452410456609c9ded967426eb5f67",
+      "source_declared_sha256": "fe499b0517d6c4919f5317f3c18b512e43d452410456609c9ded967426eb5f67",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-x64-Setup.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-b10964cfb3dfc64b597d/Alpha-0.3.0-x64-Setup.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.3.0",
+      "name": "Alpha-0.3.0-x64.AppImage",
+      "size": 177616008,
+      "sha256": "22b5433ffeba2f4516548c84b4b8c70ea7f60e9f9ffe26441f6ed1a09a138402",
+      "source_declared_sha256": "22b5433ffeba2f4516548c84b4b8c70ea7f60e9f9ffe26441f6ed1a09a138402",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-x64.AppImage",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-b10964cfb3dfc64b597d/Alpha-0.3.0-x64.AppImage",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.3.0",
+      "name": "Alpha-0.3.0-x64.deb",
+      "size": 140092396,
+      "sha256": "1eb1f8bd47e4b8fa26c48eac9b7208331646d3f38e3d3dc22547eb71d5e6d93e",
+      "source_declared_sha256": "1eb1f8bd47e4b8fa26c48eac9b7208331646d3f38e3d3dc22547eb71d5e6d93e",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.0/Alpha-0.3.0-x64.deb",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-b10964cfb3dfc64b597d/Alpha-0.3.0-x64.deb",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.3.5",
+      "name": "Alpha-0.3.5-arm64.dmg",
+      "size": 183712520,
+      "sha256": "53bb2ba02edf784e77629f80b7330d9b5653cbcbd8e5527849267c5a6f209004",
+      "source_declared_sha256": "53bb2ba02edf784e77629f80b7330d9b5653cbcbd8e5527849267c5a6f209004",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-arm64.dmg",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-485ff74b3dc7fcf24479/Alpha-0.3.5-arm64.dmg",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.3.5",
+      "name": "Alpha-0.3.5-x64-Setup.exe",
+      "size": 138276689,
+      "sha256": "374d94b488ef214c3c784fa4b1a0cbd6d5645740dee7a54659ab9db62efe4272",
+      "source_declared_sha256": "374d94b488ef214c3c784fa4b1a0cbd6d5645740dee7a54659ab9db62efe4272",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-x64-Setup.exe",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-485ff74b3dc7fcf24479/Alpha-0.3.5-x64-Setup.exe",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.3.5",
+      "name": "Alpha-0.3.5-x64.AppImage",
+      "size": 177894655,
+      "sha256": "dc54cbe8a5d1b43cff017665aee15c4ca929a836a77124f32f25541312ac2639",
+      "source_declared_sha256": "dc54cbe8a5d1b43cff017665aee15c4ca929a836a77124f32f25541312ac2639",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-x64.AppImage",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-485ff74b3dc7fcf24479/Alpha-0.3.5-x64.AppImage",
+      "destination_digest_verified": true
+    },
+    {
+      "tag": "v0.3.5",
+      "name": "Alpha-0.3.5-x64.deb",
+      "size": 140303892,
+      "sha256": "e9398fc7e61300c743592d83a38820fc84524864921c0b1df3ef9a0e97137d48",
+      "source_declared_sha256": "e9398fc7e61300c743592d83a38820fc84524864921c0b1df3ef9a0e97137d48",
+      "source_url": "https://github.com/xunchahaha/alpha-releases/releases/download/v0.3.5/Alpha-0.3.5-x64.deb",
+      "destination_url": "https://github.com/F96371/alpha-releases/releases/download/untagged-485ff74b3dc7fcf24479/Alpha-0.3.5-x64.deb",
+      "destination_digest_verified": true
+    }
+  ]
+}

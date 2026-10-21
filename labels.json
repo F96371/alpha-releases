@@ -1,0 +1,189 @@
+[
+  {
+    "id": 12580541009,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC7dvSUQ",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/bug",
+    "name": "bug",
+    "color": "d73a4a",
+    "default": true,
+    "description": "Something isn't working",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756121317,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FL25Q",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/WeFlow",
+    "name": "WeFlow",
+    "color": "e99695",
+    "default": false,
+    "description": "与 WeFlow 底层相关",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12580541122,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC7dvSwg",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E4%B8%8D%E4%BA%88%E4%BF%AE%E5%A4%8D",
+    "name": "不予修复",
+    "color": "ffffff",
+    "default": false,
+    "description": "不会处理",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756121220,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FL2hA",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E4%BC%98%E5%8C%96",
+    "name": "优化",
+    "color": "c2e0c6",
+    "default": false,
+    "description": "已有功能的改进",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756219698,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FR3Mg",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E5%B7%B2%E5%A4%8D%E7%8E%B0",
+    "name": "已复现",
+    "color": "d93f0b",
+    "default": false,
+    "description": "已成功复现",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756121035,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FL1yw",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E5%B7%B2%E5%AE%8C%E6%88%90",
+    "name": "已完成",
+    "color": "0e8a16",
+    "default": false,
+    "description": "已修复或已实现并确认",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756120771,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FL0ww",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E5%BE%85%E5%A4%84%E7%90%86",
+    "name": "待处理",
+    "color": "fbca04",
+    "default": false,
+    "description": "还没开始处理",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756219594,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FR2yg",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E5%BE%85%E5%A4%8D%E7%8E%B0",
+    "name": "待复现",
+    "color": "f9d0c4",
+    "default": false,
+    "description": "还没复现，需要尝试复现",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756120968,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FL1iA",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E5%BE%85%E9%AA%8C%E8%AF%81",
+    "name": "待验证",
+    "color": "d4c5f9",
+    "default": false,
+    "description": "已修复，等反馈者确认",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12580541042,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC7dvScg",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E6%96%87%E6%A1%A3",
+    "name": "文档",
+    "color": "0075ca",
+    "default": false,
+    "description": "文档的改进或补充",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756121115,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FL2Gw",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E6%96%B0%E5%8A%9F%E8%83%BD",
+    "name": "新功能",
+    "color": "a2eeef",
+    "default": false,
+    "description": "新功能需求",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12580541110,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC7dvStg",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E6%97%A0%E6%95%88",
+    "name": "无效",
+    "color": "e4e669",
+    "default": false,
+    "description": "看起来不对或不成立",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756219787,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FR3iw",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E6%97%A0%E6%B3%95%E5%A4%8D%E7%8E%B0",
+    "name": "无法复现",
+    "color": "cccccc",
+    "default": false,
+    "description": "按描述无法复现",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756120842,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FL1Cg",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E8%A7%84%E5%88%92%E4%B8%AD",
+    "name": "规划中",
+    "color": "bfdadc",
+    "default": false,
+    "description": "已列入计划，暂未开始",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12756120902,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC-FL1Rg",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E8%BF%9B%E8%A1%8C%E4%B8%AD",
+    "name": "进行中",
+    "color": "1d76db",
+    "default": false,
+    "description": "正在处理",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12580541055,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC7dvSfw",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E9%87%8D%E5%A4%8D",
+    "name": "重复",
+    "color": "cfd3d7",
+    "default": false,
+    "description": "已有相同的 issue",
+    "archived_at": null,
+    "archived_by": null
+  },
+  {
+    "id": 12580541117,
+    "node_id": "LA_kwDOU_ZGUs8AAAAC7dvSvQ",
+    "url": "https://api.github.com/repos/xunchahaha/alpha-releases/labels/%E9%97%AE%E9%A2%98%E5%92%A8%E8%AF%A2",
+    "name": "问题咨询",
+    "color": "d876e3",
+    "default": false,
+    "description": "需要更多信息",
+    "archived_at": null,
+    "archived_by": null
+  }
+]
