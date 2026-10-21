@@ -1,0 +1,348 @@
+name: One-time complete Alpha release backup
+on:
+  push:
+    branches: [backup/transfer-2026-10-21]
+permissions:
+  contents: write
+concurrency:
+  group: one-time-alpha-release-backup
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Copy releases and verify every asset SHA-256
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures as cf
+          import datetime as dt
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          import re
+          import shutil
+          import subprocess
+          import threading
+          import time
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+          
+          ROOT = Path.cwd()
+          WORK = ROOT / 'work'
+          OUT = ROOT / 'outputs'
+          DOWNLOADS = WORK / 'release-assets'
+          META = WORK / 'source-metadata'
+          for p in (DOWNLOADS, META, OUT):
+              p.mkdir(parents=True, exist_ok=True)
+          SOURCE = 'xunchahaha/alpha-releases'
+          DEST = 'F96371/alpha-releases'
+          API = 'https://api.github.com'
+          lock = threading.Lock()
+          
+          def log(text):
+              with lock:
+                  print(text, flush=True)
+                  with (WORK / 'transfer.log').open('a', encoding='utf-8') as f:
+                      f.write(text + '\n')
+          
+          env = os.environ.copy()
+          env.update(GIT_TERMINAL_PROMPT='0', GCM_INTERACTIVE='never')
+          token = os.environ['GH_TOKEN']
+          if os.environ.get('TARGET_REPO') != DEST:
+              raise RuntimeError('Unexpected target repository')
+          
+          class SafeRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  new = super().redirect_request(req, fp, code, msg, headers, newurl)
+                  if new and urllib.parse.urlsplit(newurl).hostname != urllib.parse.urlsplit(req.full_url).hostname:
+                      new.remove_header('Authorization')
+                  return new
+          
+          # Windows urllib proxy-bypass probing performs slow DNS/reverse-DNS lookups.
+          # These public GitHub hosts use the already configured system proxy unchanged.
+          original_proxy_bypass = urllib.request.proxy_bypass
+          proxy_hosts = {'api.github.com', 'github.com', 'uploads.github.com', 'release-assets.githubusercontent.com', 'objects.githubusercontent.com'}
+          urllib.request.proxy_bypass = lambda host: False if host.split(':')[0].lower() in proxy_hosts else original_proxy_bypass(host)
+          opener = urllib.request.build_opener(SafeRedirect)
+          
+          def request(path, method='GET', payload=None, file=None, timeout=180, content_type='application/octet-stream'):
+              url = path if path.startswith('https://') else API + path
+              host = urllib.parse.urlsplit(url).hostname
+              if host not in ('api.github.com', 'uploads.github.com'):
+                  raise RuntimeError('Unexpected authenticated host')
+              headers = {'Authorization': 'Bearer ' + token, 'User-Agent': 'Codex-repository-backup', 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28'}
+              raw = json.dumps(payload).encode('utf-8') if payload is not None else None
+              if payload is not None:
+                  headers['Content-Type'] = 'application/json'
+              attempts = 5 if method == 'GET' else 2
+              for attempt in range(attempts):
+                  fh = None
+                  try:
+                      if file is not None:
+                          fh = open(file, 'rb')
+                          raw = fh
+                          headers['Content-Length'] = str(Path(file).stat().st_size)
+                          headers['Content-Type'] = content_type
+                      req = urllib.request.Request(url, data=raw, headers=headers, method=method)
+                      with opener.open(req, timeout=timeout) as resp:
+                          data = resp.read()
+                          return json.loads(data) if data else None
+                  except urllib.error.HTTPError as e:
+                      text = e.read().decode('utf-8', 'replace')[:1200]
+                      if e.code in (429, 500, 502, 503, 504) and attempt + 1 < attempts:
+                          time.sleep(min(60, 5 * (attempt + 1)))
+                          continue
+                      raise RuntimeError(f'{method} {urllib.parse.urlsplit(url).path}: HTTP {e.code}: {text}') from None
+                  except (TimeoutError, OSError) as e:
+                      if method == 'GET' and attempt + 1 < attempts:
+                          time.sleep(3 * (attempt + 1))
+                          continue
+                      raise RuntimeError(f'{method} {urllib.parse.urlsplit(url).path}: {type(e).__name__}') from None
+                  finally:
+                      if fh:
+                          fh.close()
+          
+          def pages(path):
+              result = []
+              for page in range(1, 1001):
+                  sep = '&' if '?' in path else '?'
+                  items = request(f'{path}{sep}per_page=100&page={page}')
+                  if not isinstance(items, list):
+                      raise RuntimeError('Expected paginated list: ' + path)
+                  result.extend(items)
+                  if len(items) < 100:
+                      return result
+              raise RuntimeError('Pagination safety limit reached')
+          
+          def save(path, data):
+              path.parent.mkdir(parents=True, exist_ok=True)
+              temp = path.with_suffix(path.suffix + '.tmp')
+              temp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              temp.replace(path)
+          
+          repo = request('/repos/' + SOURCE)
+          releases = pages('/repos/' + SOURCE + '/releases')
+          latest = request('/repos/' + SOURCE + '/releases/latest')['tag_name']
+          source_assets = [a for r in releases for a in r['assets']]
+          total_bytes = sum(a['size'] for a in source_assets)
+          log(f'INVENTORY releases={len(releases)} assets={len(source_assets)} bytes={total_bytes} latest={latest}')
+          if shutil.disk_usage(WORK).free < 3 * max(a['size'] for a in source_assets) + 512 * 1024 * 1024:
+              raise RuntimeError('Insufficient disk space')
+          
+          # Preserve source records, including the original author/timestamp/ID fields.
+          save(META / 'repository.json', repo)
+          save(META / 'releases.json', releases)
+          for name, path in {
+              'branches': '/branches', 'tags': '/tags', 'labels': '/labels',
+              'milestones': '/milestones?state=all', 'issues': '/issues?state=all',
+              'issue-comments': '/issues/comments', 'issue-events': '/issues/events',
+              'pull-requests': '/pulls?state=all', 'contributors': '/contributors?anon=1',
+          }.items():
+              data = pages('/repos/' + SOURCE + path)
+              save(META / (name + '.json'), data)
+              log(f'METADATA {name}={len(data)}')
+          
+          # Record all Git refs and verify the source refs exist identically in the fork.
+          def refs(repository):
+              p = subprocess.run(['git', 'ls-remote', 'https://github.com/' + repository + '.git'], capture_output=True, text=True, env=env, check=True)
+              return dict((line.split('\t', 1)[1], line.split('\t', 1)[0]) for line in p.stdout.splitlines() if '\t' in line)
+          source_refs, dest_refs = refs(SOURCE), refs(DEST)
+          missing = {name: sha for name, sha in source_refs.items() if dest_refs.get(name) != sha}
+          if missing:
+              raise RuntimeError('Fork Git refs do not match source: ' + json.dumps(missing))
+          save(META / 'git-refs.json', source_refs)
+          log(f'GIT verified refs={len(source_refs)}')
+          
+          existing = {r['tag_name']: r for r in pages('/repos/' + DEST + '/releases')}
+          targets = {}
+          for release in sorted(releases, key=lambda r: r['published_at'] or r['created_at']):
+              tag = release['tag_name']
+              if tag in existing:
+                  dest_release = existing[tag]
+                  if dest_release.get('body') != release.get('body') or dest_release['name'] != release['name']:
+                      raise RuntimeError('Existing release differs; not overwriting: ' + tag)
+              else:
+                  dest_release = request('/repos/' + DEST + '/releases', 'POST', {
+                      'tag_name': tag, 'target_commitish': release['target_commitish'],
+                      'name': release['name'], 'body': release.get('body'),
+                      'draft': True, 'prerelease': release['prerelease'],
+                      'generate_release_notes': False,
+                  })
+                  log('CREATED draft release ' + tag)
+              targets[tag] = dest_release
+          save(WORK / 'destination-release-map.json', {k: v['id'] for k, v in targets.items()})
+          
+          results = []
+          
+          def download(asset, release):
+              folder = DOWNLOADS / str(release['id'])
+              folder.mkdir(exist_ok=True)
+              name = asset['name']
+              if Path(name).name != name or '/' in name or '\\' in name:
+                  raise RuntimeError('Unsafe asset filename')
+              final = folder / name
+              expected = asset.get('digest')
+              if expected and not expected.startswith('sha256:'):
+                  expected = None
+              if not expected:
+                  for line in (release.get('body') or '').splitlines():
+                      if name in line:
+                          hashes = re.findall(r'\b[a-fA-F0-9]{64}\b', line)
+                          if len(hashes) == 1:
+                              expected = 'sha256:' + hashes[0].lower()
+                              break
+              def get_hash(path):
+                  h = hashlib.sha256()
+                  with path.open('rb') as f:
+                      for block in iter(lambda: f.read(1024 * 1024), b''):
+                          h.update(block)
+                  return 'sha256:' + h.hexdigest()
+              if final.exists() and final.stat().st_size == asset['size']:
+                  digest = get_hash(final)
+                  if not expected or digest == expected:
+                      return final, digest, expected
+              part = final.with_name(final.name + '.part')
+              for attempt in range(5):
+                  try:
+                      h = hashlib.sha256()
+                      count = 0
+                      req = urllib.request.Request(asset['browser_download_url'], headers={'User-Agent': 'Codex-repository-backup'})
+                      with opener.open(req, timeout=180) as response, part.open('wb') as f:
+                          for block in iter(lambda: response.read(1024 * 1024), b''):
+                              count += len(block)
+                              h.update(block)
+                              f.write(block)
+                      digest = 'sha256:' + h.hexdigest()
+                      if count != asset['size']:
+                          raise RuntimeError('Asset size mismatch: ' + name)
+                      if expected and digest != expected:
+                          raise RuntimeError('Source SHA256 mismatch: ' + name)
+                      part.replace(final)
+                      return final, digest, expected
+                  except Exception as e:
+                      if attempt == 4:
+                          raise
+                      log(f'RETRY download {name} {type(e).__name__}')
+                      time.sleep(3 * (attempt + 1))
+          
+          def transfer(release, asset):
+              tag = release['tag_name']
+              name = asset['name']
+              log(f'DOWNLOAD {tag}/{name} bytes={asset["size"]}')
+              path, digest, expected = download(asset, release)
+              target = targets[tag]
+              matches = [a for a in target['assets'] if a['name'] == name]
+              if matches:
+                  copied = matches[0]
+              else:
+                  log(f'UPLOAD {tag}/{name}')
+                  query = {'name': name}
+                  if asset.get('label'):
+                      query['label'] = asset['label']
+                  url = target['upload_url'].split('{', 1)[0] + '?' + urllib.parse.urlencode(query)
+                  copied = request(url, 'POST', file=path, timeout=900, content_type=asset['content_type'])
+              if copied['size'] != asset['size']:
+                  raise RuntimeError('Destination asset size mismatch: ' + name)
+              if copied.get('digest') != digest:
+                  raise RuntimeError('Destination SHA256 missing or mismatch: ' + name)
+              record = {
+                  'tag': tag, 'name': name, 'size': asset['size'], 'sha256': digest[7:],
+                  'source_declared_sha256': expected[7:] if expected else None,
+                  'source_url': asset['browser_download_url'], 'destination_url': copied['browser_download_url'],
+                  'destination_digest_verified': True,
+              }
+              with lock:
+                  results.append(record)
+                  save(WORK / 'verified-assets.json', results)
+              log(f'VERIFIED {tag}/{name} sha256={digest[7:]}')
+              # Remove only this script's verified temporary asset, never user files.
+              if path.parent.parent.resolve() != DOWNLOADS.resolve():
+                  raise RuntimeError('Temporary asset path outside expected workspace')
+              path.unlink()
+              return record
+          
+          with cf.ThreadPoolExecutor(max_workers=3) as pool:
+              futures = [pool.submit(transfer, release, asset) for release in releases for asset in release['assets']]
+              failures = []
+              for future in cf.as_completed(futures):
+                  try:
+                      future.result()
+                  except Exception as e:
+                      failures.append(str(e))
+                      log('ERROR ' + str(e))
+              if failures:
+                  save(OUT / 'transfer-failures.json', failures)
+                  raise RuntimeError(f'{len(failures)} transfers failed; verified assets retained for resume')
+          
+          # Publish in original chronological order; explicitly preserve which tag is latest.
+          for release in sorted(releases, key=lambda r: r['published_at'] or r['created_at']):
+              tag = release['tag_name']
+              patch = {'draft': release['draft'], 'prerelease': release['prerelease'],
+                       'make_latest': 'false' if tag != latest else 'true'}
+              request('/repos/' + DEST + '/releases/' + str(targets[tag]['id']), 'PATCH', patch)
+              log('PUBLISHED ' + tag)
+          # Do this last so publication ordering cannot change the intended latest release.
+          request('/repos/' + DEST + '/releases/' + str(targets[latest]['id']), 'PATCH', {'make_latest': 'true'})
+          
+          final_releases = pages('/repos/' + DEST + '/releases')
+          final_map = {r['tag_name']: r for r in final_releases}
+          for source in releases:
+              target = final_map[source['tag_name']]
+              for key in ('name', 'body', 'prerelease', 'draft'):
+                  if target.get(key) != source.get(key):
+                      raise RuntimeError('Release metadata mismatch: ' + source['tag_name'] + ':' + key)
+              target_assets = {a['name']: a for a in target['assets']}
+              if set(target_assets) != {a['name'] for a in source['assets']}:
+                  raise RuntimeError('Asset name set mismatch')
+              for asset in source['assets']:
+                  copied = target_assets[asset['name']]
+                  verified = next(a for a in results if a['tag'] == source['tag_name'] and a['name'] == asset['name'])
+                  if copied['size'] != asset['size'] or copied.get('digest') != 'sha256:' + verified['sha256']:
+                      raise RuntimeError('Final asset verification failed')
+          if request('/repos/' + DEST + '/releases/latest')['tag_name'] != latest:
+              raise RuntimeError('Latest release mismatch')
+          
+          report = {
+              'source': SOURCE, 'destination': DEST, 'checked_at_utc': dt.datetime.now(dt.timezone.utc).isoformat(),
+              'source_head': source_refs['HEAD'], 'all_source_git_refs_identical': True,
+              'release_count': len(releases), 'asset_count': len(results), 'asset_bytes': total_bytes,
+              'all_asset_sha256_verified': True, 'latest_tag': latest,
+              'issues_archived_count': len(json.loads((META / 'issues.json').read_text(encoding='utf-8'))),
+              'limitations': ['GitHub-generated release/asset IDs, original author identity, original creation/publication times and download counts cannot be assigned to the new copies.', 'Issue content and original metadata are archived as JSON; original issue identities are not recreated.', 'Source discussion/reaction participants, stars/watchers/forks and unavailable private projects are not cloned.'],
+              'assets': sorted(results, key=lambda a: (a['tag'], a['name'])),
+          }
+          save(OUT / 'transfer-verification.json', report)
+          (META / 'README.md').write_text('# Source repository metadata archive\n\nSource: https://github.com/' + SOURCE + '\n\nExported at ' + report['checked_at_utc'] + '. Original source JSON retains IDs, authors, URLs, timestamps, issue comments and issue events. This is an archive, not impersonated issue creation.\n\nGit source branch and tags are unchanged. Releases were copied with verified SHA-256 hashes. GitHub assigns new IDs, authorship and timestamps to copied releases/assets.\n', encoding='utf-8')
+          shutil.copyfile(OUT / 'transfer-verification.json', META / 'transfer-verification.json')
+          shutil.make_archive(str(OUT / 'alpha-releases-source-metadata'), 'zip', META)
+          log(f'COMPLETE releases={len(releases)} assets={len(results)} bytes={total_bytes}')
+          
+          
+          
+          
+          
+          # Preserve original issue records and the verification manifest on a separate branch.
+          entries = []
+          expected_blobs = {}
+          for path in sorted(META.iterdir()):
+              if not path.is_file():
+                  continue
+              raw = path.read_bytes()
+              expected_blobs[path.name] = hashlib.sha1(('blob ' + str(len(raw)) + '\0').encode('ascii') + raw).hexdigest()
+              entries.append({'path': path.name, 'mode': '100644', 'type': 'blob', 'content': raw.decode('utf-8')})
+          tree = request('/repos/' + DEST + '/git/trees', 'POST', {'tree': entries})
+          commit = request('/repos/' + DEST + '/git/commits', 'POST', {'message': 'Archive original source records and verified release manifest', 'tree': tree['sha'], 'parents': []})
+          branch = 'backup/source-metadata-2026-10-21'
+          request('/repos/' + DEST + '/git/refs', 'POST', {'ref': 'refs/heads/' + branch, 'sha': commit['sha']})
+          remote_tree = request('/repos/' + DEST + '/git/trees/' + tree['sha'])
+          if {entry['path']: entry['sha'] for entry in remote_tree['tree']} != expected_blobs:
+              raise RuntimeError('Metadata Git blob hash verification failed')
+          log('METADATA_PUBLISHED https://github.com/' + DEST + '/tree/' + branch)
+          PY
